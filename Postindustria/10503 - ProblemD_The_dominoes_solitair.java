@@ -9,8 +9,8 @@ import java.util.Scanner;
  */
 public class ProblemD_The_dominoes_solitair {
     private static int Spaces,NumOfPieces;
-    private static final int Pieces[][] = new int[14][2];
-    private static final boolean Visited[] = new boolean[14];
+    private static final int Pieces[][] = new int[205][2];
+    private static final boolean Visited[] = new boolean[205];
     
     static boolean BackTrack(int Last, int Depth){
         if(Depth == Spaces) {
@@ -34,18 +34,20 @@ public class ProblemD_The_dominoes_solitair {
     
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        do{
+        while(sc.hasNext()){
             Spaces = sc.nextInt();
-            NumOfPieces = sc.nextInt(); 
+            if (Spaces == 0) break;
+            
+            NumOfPieces = sc.nextInt();
             NumOfPieces+=2;
             
             for( int i = 0 ; i < NumOfPieces ; i++ ) {
-                Pieces[i][0] = sc.nextInt(); 
+                Pieces[i][0] = sc.nextInt();
                 Pieces[i][1] = sc.nextInt();
             }
             Visited[0] = Visited[1] = true;
             
-            System.out.println((BackTrack(Pieces[0][1], NULL)) ? "YES" : "NO");
-        }while(Spaces != 0);
+            System.out.println((BackTrack(Pieces[0][1],NULL)) ? "YES" : "NO");
+        }
     }
 }
