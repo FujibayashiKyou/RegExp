@@ -12,11 +12,6 @@ public class Main {
                 
                 Comparator<Character> comp = new Comparator<Character>() {
                         public int compare(Character c1, Character c2) {
-                                if((Character)Character.toLowerCase(c1)).compareTo((Character)Character.toLowerCase(c2)) !=0) {
-                                        if (((Character)Character.toLowerCase(c1)).compareTo((Character)Character.toLowerCase(c2)))
-                                                return ((Character)Character.toLowerCase(c1)).compareTo((Character)Character.toLowerCase(c2));
-                                } else return (c1.compareTo(c2));
-                                
                                 return ((Character)Character.toLowerCase(c1)).compareTo((Character)Character.toLowerCase(c2)) !=0 
                                         ?((Character)Character.toLowerCase(c1)).compareTo((Character)Character.toLowerCase(c2)) : (c1.compareTo(c2));
                         }
