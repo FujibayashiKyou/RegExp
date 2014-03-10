@@ -24,12 +24,12 @@ public class Main {
                         for(int i = 0; i < arr.length; i++) arr1[i] = arr[i];
                         Arrays.sort(arr1, comp);
                         
-                        for(Character w: arr1) System.out.print(w);
-                        System.out.println("\n");
+                        for(Character w: arr1) sb.append(w);
+                        sb.append("\n");
                         
                         for(Character[] res = arr1; (res = next_permutation(res, comp, (Character)Character.MAX_VALUE)) != null; ){
-                                for(Character w: res) System.out.print(w);
-                                System.out.println("\n");
+                                for(Character w: res) sb.append(w);
+                                sb.append("\n");
                         }
                 }
                 System.out.print(new String(sb));
