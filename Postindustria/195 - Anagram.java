@@ -7,7 +7,8 @@ import java.util.*;
 
 public class Main {
         public static void main(String[] args) throws Throwable{
-                BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+                //BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+                Scanner sc = new Scanner(System.in);
                 StringBuilder sb = new StringBuilder();
                 
                 Comparator<Character> comp = new Comparator<Character>() {
